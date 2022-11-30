@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LifehackTestTask</string>
+    <string name="company_id">id</string>
+    <string name="name">name</string>
+    <string name="description">description</string>
+    <string name="lat">lat</string>
+    <string name="lon">lon</string>
+    <string name="www">www</string>
+    <string name="phone">phone</string>
+</resources>

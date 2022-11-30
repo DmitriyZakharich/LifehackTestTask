@@ -3,9 +3,8 @@ package com.example.lifehacktesttask.screens.list_screen.domain
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
-import com.example.lifehacktesttask.screens.list_screen.domain.mappers.GithubRepoInfoMapper.Companion.modelRepositoryToDomain
+import com.example.lifehacktesttask.screens.list_screen.domain.mappers.modelRepositoryToDomain
 import com.example.lifehacktesttask.screens.list_screen.repository.interfaces.CompaniesListLoader
-import com.example.lifehacktesttask.screens.list_screen.domain.models.CompanyDomain
 import com.example.lifehacktesttask.screens.list_screen.repository.models.CompanyRepository
 import com.example.lifehacktesttask.screens.list_screen.viewmodel.interfaces.GetAdapterUseCase
 

@@ -10,13 +10,10 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lifehacktesttask.R
 import com.example.lifehacktesttask.screens.list_screen.domain.models.CompanyDomain
-import com.squareup.picasso.Picasso
 
 class CustomRecyclerAdapter(
         private val data: List<CompanyDomain>,
 ) : RecyclerView.Adapter<CustomRecyclerAdapter.MyViewHolder>() {
-
-    private val picasso = Picasso.get()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView =
@@ -28,7 +25,7 @@ class CustomRecyclerAdapter(
         holder.companyId.text = data[position].id
         holder.companyName.text = data[position].name
 
-        picasso.load("https://lifehack.studio/test_task/${data[position].img}").into(holder.imageView)
+        data[position].img.into(holder.imageView)
 
         val bundle = Bundle().apply {
             putString("id", data[position].id)

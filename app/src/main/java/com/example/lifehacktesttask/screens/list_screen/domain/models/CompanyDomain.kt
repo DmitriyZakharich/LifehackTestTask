@@ -1,9 +1,9 @@
 package com.example.lifehacktesttask.screens.list_screen.domain.models
 
-//class CompaniesList: ArrayList<CompanyItem>()
+import com.squareup.picasso.RequestCreator
 
 data class CompanyDomain(
         val id: String,
-        val img: String,
+        val img: RequestCreator,
         val name: String
 )

@@ -16,7 +16,7 @@
         android:text="@string/company_id"
         android:textSize="30sp"
         android:textColor="@color/black"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:text="@string/description"
         android:textSize="30sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/company_id" />
@@ -40,22 +40,23 @@
         android:lines="1"
         android:text="@string/lat"
         android:textSize="30sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description" />
 
     <TextView
         android:id="@+id/lon"
-        android:layout_width="11dp"
-        android:layout_height="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:lines="1"
         android:text="@string/lon"
         android:textSize="30sp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/company_id"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/lat"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/lat"
+        app:layout_constraintTop_toTopOf="@+id/lat" />
 
     <TextView
         android:id="@+id/name"
@@ -64,7 +65,7 @@
         android:lines="1"
         android:text="@string/name"
         android:textSize="30sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone" />
@@ -76,7 +77,7 @@
         android:lines="1"
         android:text="@string/phone"
         android:textSize="30sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lat" />
@@ -88,32 +89,21 @@
         android:lines="1"
         android:text="@string/www"
         android:textSize="30sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
-    <TextView
-        android:id="@+id/updated_at"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:lines="1"
-        android:text="Updated "
-        android:textSize="30sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/www" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher_foreground"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updated_at" />
+        app:layout_constraintTop_toBottomOf="@+id/www" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -123,9 +113,8 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.885" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

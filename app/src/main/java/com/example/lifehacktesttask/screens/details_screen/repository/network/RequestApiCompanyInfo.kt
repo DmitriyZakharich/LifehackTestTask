@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface RequestApiCompanyInfo {
-    @GET("test.php")
+    @GET("test_task/test.php")
     fun getRequest(@Query("id") id: String): Call<List<CompanyInfoRepository>>
 }
 

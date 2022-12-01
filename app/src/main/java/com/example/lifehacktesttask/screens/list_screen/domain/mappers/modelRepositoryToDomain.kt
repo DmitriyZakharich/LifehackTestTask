@@ -4,7 +4,6 @@ import com.example.lifehacktesttask.screens.list_screen.domain.models.CompanyDom
 import com.example.lifehacktesttask.screens.list_screen.repository.models.CompanyRepository
 import com.example.lifehacktesttask.utils.downloadImages
 
-
 fun modelRepositoryToDomain(
         list: List<CompanyRepository>): List<CompanyDomain> {
     val newList = mutableListOf<CompanyDomain>()

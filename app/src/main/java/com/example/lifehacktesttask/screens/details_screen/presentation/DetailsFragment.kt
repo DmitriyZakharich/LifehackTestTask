@@ -26,9 +26,6 @@ class DetailsFragment : Fragment() {
     private var _binding: FragmentDetailsBinding? = null
     private val binding get() = _binding!!
 
-    private val picasso = Picasso.get()
-
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?): View {
         _binding = FragmentDetailsBinding.inflate(inflater, container, false)
@@ -43,7 +40,6 @@ class DetailsFragment : Fragment() {
         viewModel.info.observe(viewLifecycleOwner, observer())
 
         val id = arguments?.getString("id")
-        Log.d("1223231", "id: $id")
         if (id != null) viewModel.getData(id)
     }
 

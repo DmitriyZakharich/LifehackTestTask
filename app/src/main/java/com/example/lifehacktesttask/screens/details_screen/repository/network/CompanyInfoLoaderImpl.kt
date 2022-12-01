@@ -14,9 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class CompanyInfoLoaderImpl : CompanyInfoLoader {
 
-
-
-    private val retrofit = Retrofit.Builder().baseUrl("https://lifehack.studio/test_task/")
+    private val retrofit = Retrofit.Builder().baseUrl("https://lifehack.studio/")
         .addConverterFactory(GsonConverterFactory.create()).build()
 
     private val _info = MutableLiveData<CompanyInfoRepository>()
@@ -29,7 +27,7 @@ class CompanyInfoLoaderImpl : CompanyInfoLoader {
         call.enqueue(object : Callback<List<CompanyInfoRepository>> {
 
             override fun onFailure(call: Call<List<CompanyInfoRepository>>, t: Throwable) {
-                Toast.makeText(MyApp.applicationContext(), "Нет данных", Toast.LENGTH_SHORT).show()
+                Toast.makeText(MyApp.applicationContext(), "Ошибка", Toast.LENGTH_SHORT).show()
             }
 
             override fun onResponse(call: Call<List<CompanyInfoRepository>>,

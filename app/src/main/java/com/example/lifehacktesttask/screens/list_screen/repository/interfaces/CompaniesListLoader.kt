@@ -6,5 +6,5 @@ import com.example.lifehacktesttask.screens.list_screen.repository.models.Compan
 
 interface CompaniesListLoader {
     val companiesList: LiveData<List<CompanyRepository>>
-    fun loadGithubReposList()
+    fun start()
 }

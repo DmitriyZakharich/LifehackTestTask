@@ -22,6 +22,6 @@ class GetAdapterUseCaseImpl(private val companiesListLoader: CompaniesListLoader
     }
 
     override fun start() {
-        companiesListLoader.loadGithubReposList()
+        companiesListLoader.start()
     }
 }

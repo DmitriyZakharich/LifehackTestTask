@@ -21,7 +21,7 @@ class CompaniesListLoaderImpl : CompaniesListLoader {
     private val _companiesList = MutableLiveData<List<CompanyRepository>>()
     override val companiesList: LiveData<List<CompanyRepository>> = _companiesList
 
-    override fun loadGithubReposList() {
+    override fun start() {
         val requestApiGithubRepos = retrofit.create(RequestApiGithubRepos::class.java)
         val call = requestApiGithubRepos.getRequest()
 
